@@ -12,8 +12,7 @@ body {
    background-image: url(logo.png);
    height: 99px;
    width: 375px;
-   margin-left: 300px;
-   margin-right: 300px;
+   margin: auto;
 
 }
 
@@ -22,9 +21,7 @@ h1 {
    font-family: 'Jost', sans-serif;
    color: gray;
    font-size: 28px;
-   margin-left: 300px;
-   margin-right: 300px;
-
+   margin: auto;
 }
 
 
