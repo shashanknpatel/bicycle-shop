@@ -1,0 +1,91 @@
+
+body {
+    background: rgb(207, 183, 166);
+   
+}
+
+
+/*/comienzo del header/*/
+.cajauno {
+   display: flex;
+   border: 1px solid black;
+   background-image: url(logo.png);
+   height: 99px;
+   width: 375px;
+   margin: auto;
+
+}
+
+
+h1 { 
+   font-family: 'Jost', sans-serif;
+   color: gray;
+   font-size: 28px;
+   margin: auto;
+
+}
+
+
+
+p {
+   text-align: center;
+   font-size: 18px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   margin-bottom: -50px;
+   color: black;
+}
+
+/*fin del header/*/
+
+/*/comienzo de main/*/
+
+.cajados {
+   display: flex;
+   margin:  100px 300px;
+   flex-wrap: wrap; 
+   justify-content: space-around;
+
+}
+
+
+.cajitas {
+    align-self: center;
+    margin: 16px 2px;
+    
+}
+
+.cajitas:hover {
+   box-shadow: rgb(255, 255, 255) 3px 3px 16px 3px;
+}
+  
+  
+
+img {
+   
+   width: 200px;
+   height: 140px;
+}
+
+.nameimg {
+   padding: 8px 8px 10px 8px;
+   border: 1px solid rgb(248, 247, 246);
+   background: rgb(238, 227, 208);
+ 
+}
+
+figcaption {
+   background-image: url(icon.svg);
+   height: 20px;
+   width: 20px;
+  
+}
+
+span {
+    color: black;
+   font-family:'Noto Serif', serif; 
+   font-size: 14px;
+   margin: 70px 20px;
+
+}
+
+/*/fin de main/*/
