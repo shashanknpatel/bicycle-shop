@@ -1,70 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100&family=Noto+Serif&display=swap" rel="stylesheet">   
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="navbarwithdroopdown.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
 <body>
- <header class="cajauno"> 
-     <h1>Galerie Botanique</h1>
- </header>
-  <main>
-    <section> 
-        <P>Aquí hay una selección de grabados botánicos que se   encuentran en nuestra colección    
-        </P>
-        
-        <div class="cajados">
-
-            <div class="cajitas">
-              <div class="nameimg"> 
-                <img src="flower1.png" alt="flores" >
-               <figcaption><span>Helianthus</span></figcaption>
-              </div>
-            </div>
-          
-            <div  class="cajitas">
-              <div class="nameimg"> 
-                <img src="flower2.png" alt="ramo de flores">
-                <figcaption><span>Passiflora</span></figcaption>
-               </div>  
-            </div>
-           
-            <div class="cajitas"> 
-            <div class="nameimg"> 
-                <img src="flower3.jpg" alt="flores ">
-                <figcaption><span>Nyetocalos</span></figcaption>
-             </div>
-            </div>
-
-          
-            <div class="cajitas">
-              <div class="nameimg">  
-                  <img src="flower1.png" alt="flores">
-                <figcaption><span>Polianthes</span></figcaption>
-               </div> 
-            </div>
-            
-            <div class="cajitas">
-                <div class="nameimg">  
-                  <img src="flower2.png" alt="ramo de flores">
-                  <figcaption><span>Ficus</span></figcaption>
-                </div>
-           </div>
-           
-           <div  class="cajitas">
-                <div class="nameimg">  
-                  <img src="flower3.jpg" alt="flores ">
-                  <figcaption><span>Dendrobium</span></figcaption>
-                </div>
-             </div>
-         
-       </div>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Icecream</label>
+        <ul>
+            <li><a href="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </nav>
+    <section>
 
     </section>
- </main>
-    
 </body>
 </html>
