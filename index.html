@@ -1,30 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
-    <link rel="stylesheet" href="navbarwithdroopdown.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-</head>
-<body>
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo">Icecream</label>
-        <ul>
-            <li><a href="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Feedback</a></li>
-        </ul>
-    </nav>
-    <section>
-
-    </section>
-</body>
+<html>
+    <head>
+        <title>Boxes</title>
+        <style>
+            body {
+                font-size: 80%;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                letter-spacing: 0.15em;
+                background-color:black;
+            }
+            #page{
+                max-width: 940px;
+                min-width: 720px;
+                margin: 10px auto 10px auto;
+                padding: 20px;
+                border: 10px ridge gold;
+                background-color: #ffffff;
+            }
+            #logo {
+                width: 150px;
+                margin: 10px auto 25px auto;
+            }
+            ul {
+                width: 570px;
+                padding: 15px;
+                margin: 0px auto 0px auto;
+                border-top: 5px ridge gold;
+                border-bottom: 2px ridge gold;
+                text-align: center;
+            }
+            li {
+                display: inline;
+                margin: 0px 3px;
+            }
+            p {
+                text-align: center;
+                width: 600px;
+                margin: 20px auto 20px auto;
+                font-weight: normal;
+            }
+            a {
+                color: #000000;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 6px 18px 5px 18px;
+            }
+            a:hover, a.on {
+                color: #cc3333;
+                background-color: #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="page">
+            <div id="logo">
+                <img src="logo.gif" alt="The Analog Specialists">
+            </div>
+            <ul id="navigation">
+                <li><a href="#" class="on">home</a></li>
+                <li><a href="#">for sale</a></li>
+                <li><a href="#">repairs</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+            <p><img src="keys.jpg" alt="Fender Rhoades,Hohner Clavinet, and Wurlitzer EP200"></p>
+            <p>
+                "We specialize in the sale and repair of classic keyboards, 
+                in particular the Fender Rhodes, Wurlitzer EP200, and Hohner Clavinet."
+            </p>
+        </div>
+    </body>
 </html>
