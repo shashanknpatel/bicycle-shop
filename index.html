@@ -6,6 +6,7 @@
             * {
                 font-family: Arial, Helvetica, sans-serif;
                 color: black;
+                font-size: 110%;
             }
             input {
                 border-bottom: 1px dotted black;
@@ -22,7 +23,7 @@
             }
             fieldset {
                 width: 90%;
-                height: 500px;
+                height: 700px;
                 border: 3px  springgreen;
                 border-style:inset;
                 border-radius: 10px;
@@ -478,6 +479,57 @@ ul {
 .share-icons:hover .share-icons__block-right {
   transform: translateX(50%) scale(1.2);
 }
+/*tile button*/
+.button-block {
+  width: 600px;
+  margin: 2px auto;
+}
+
+.social {
+  display: inline-block;
+  margin: 30px;
+  cursor: pointer;
+}
+.social a {
+  display: block;
+  background: black;
+  padding: 20px;
+  position: relative;
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
+}
+.social a::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  left: -20px;
+  top: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  transform: rotate(0deg) skewY(-45deg);
+}
+.social a::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  transform: rotate(0deg) skewX(-45deg);
+  background: rgba(0, 0, 0, 0.7);
+  transform: rotate(45deg) scewY(-45deg);
+}
+.social a:hover {
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 30px rgba(0, 0, 0, 0.5);
+}
+.social a i {
+  color: white;
+  font-size: 30pt;
+}
         </style>
     </head>
     <body>
@@ -531,6 +583,15 @@ ul {
                         <div class="share-icons__block-right"><i class="fas fa-share text-primary"></i></div>
                       </li>
                     </ul>
+                </div>
+                <br>
+                <div class="tilebutton">
+                <div class="button-block">
+                    <div class="social"><a href="#"> <i class="fab fa-facebook"></i></a></div>
+                    <div class="social"><a href="#"> <i class="fab fa-twitter"></i></a></div>
+                    <div class="social"><a href="#"> <i class="fab fa-instagram"></i></a></div>
+                    <div class="social"><a href="#"> <i class="fab fa-youtube"></i></a></div>
+                </div>
                 </div>
             </fieldset>
         </form>
