@@ -1,72 +1,60 @@
 <html>
     <head>
-        <title>Boxes</title>
+        <title>Styling Fieldset And Legends</title>
         <style>
-            body {
-                font-size: 80%;
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                letter-spacing: 0.15em;
-                background-color:black;
+            * {
+                font-family: Arial, Helvetica, sans-serif;
+                color: black;
             }
-            #page{
-                max-width: 940px;
-                min-width: 720px;
-                margin: 10px auto 10px auto;
-                padding: 20px;
-                border: 10px ridge gold;
-                background-color: #ffffff;
+            input {
+                border-bottom: 1px dotted black;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                padding: 5px;
+                width: 280px;
+                margin-bottom: 20px;
             }
-            #logo {
-                width: 150px;
-                margin: 10px auto 25px auto;
+            input:focus {
+                border: 1px dotted #dcdcdc;
+                outline: none;
             }
-            ul {
-                width: 570px;
-                padding: 15px;
-                margin: 0px auto 0px auto;
-                border-top: 5px ridge gold;
-                border-bottom: 2px ridge gold;
-                text-align: center;
+            input#submit {
+                color:black;
+                background-color: springgreen;
+                border: none;
+                border-radius: 5px;
+                width: 80px;
             }
-            li {
-                display: inline;
-                margin: 0px 3px;
+            input#submit:hover{
+                color: white;
+                background-color: black;
             }
-            p {
-                text-align: center;
-                width: 600px;
-                margin: 20px auto 20px auto;
-                font-weight: normal;
-            }
-            a {
-                color: #000000;
+            fieldset {
+                width: 90%;
+                height: 500px;
+                border: 3px  springgreen;
+                border-style:inset;
+                border-radius: 10px;
+                padding: 10px 20px;
+                text-align: left;
                 text-transform: uppercase;
-                text-decoration: none;
-                padding: 6px 18px 5px 18px;
-            }
-            a:hover, a.on {
-                color: #cc3333;
-                background-color: #ffffff;
+                -webkit-box-shadow: 5px 5px 5px #777777;
             }
         </style>
     </head>
     <body>
-        <div id="page">
-            <div id="logo">
-                <img src="logo.gif" alt="The Analog Specialists">
-            </div>
-            <ul id="navigation">
-                <li><a href="#" class="on">home</a></li>
-                <li><a href="#">for sale</a></li>
-                <li><a href="#">repairs</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-            <p><img src="keys.jpg" alt="Fender Rhoades,Hohner Clavinet, and Wurlitzer EP200"></p>
-            <p>
-                "We specialize in the sale and repair of classic keyboards, 
-                in particular the Fender Rhodes, Wurlitzer EP200, and Hohner Clavinet."
-            </p>
-        </div>
+        <form>
+            <fieldset>
+                <legend>Newsletter</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+                <br>
+                <label for="email">Email:</label>
+                <input type="text" id="email">
+                <br>
+                <input type="submit" value="subscribe" id="submit">
+            </fieldset>
+        </form>
     </body>
 </html>
