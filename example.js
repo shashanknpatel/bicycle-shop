@@ -1,5 +1,5 @@
 // create variables for the welcome message
-var greeting = 'Howdy';
+var greeting = 'Howdy ';
 var personname = 'Molly';
 var message = ', please check your order:';
 
