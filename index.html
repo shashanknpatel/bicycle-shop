@@ -1,599 +1,90 @@
 <html>
     <head>
-        <title>Styling Fieldset And Legends</title>
-        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <title>Example</title>
         <style>
             * {
                 font-family: Arial, Helvetica, sans-serif;
+            }
+            body {
+                background-color: gold;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                text-align: center;
+            }
+            #content {
+                background-color: white;
+                border: 10px dashed gold;
+                display: inline-block;
+                padding: 30px 50px;
+                margin: 20px auto 50px auto;
+                max-width: 580px;
+                min-height: 4em;
+                overflow: auto;
+                text-align: center;
+            }
+            h1 {
+                text-indent: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            h1 {
+                width: 278px;
+                height: 112px;
+                margin: 0px auto 0px auto;
+                padding-top: 40px;
+                background: url("elderflower-logo.png") no-repeat bottom center;
+            }
+            .action {
+                background-color: gold;
                 color: black;
-                font-size: 110%;
+                width: auto;
+                height: 1 em;
+                padding: 0.5em 0.75em;
+                float: right;
             }
-            input {
-                border-bottom: 1px dotted black;
-                border-top: none;
-                border-right: none;
-                border-left: none;
-                padding: 5px;
-                width: 280px;
-                margin-bottom: 20px;
+            
+            .action {
+                position: relative;
+                top: 1.3em;
+                right: -2.3em;}
+            a {
+                text-decoration:none;
             }
-            input:focus {
-                border: 1px dotted #dcdcdc;
-                outline: none;
+            table {
+                padding: 10;
+                margin: 20px 100px 0px 100px;
             }
-            fieldset {
-                width: 90%;
-                height: 700px;
-                border: 3px  springgreen;
-                border-style:inset;
-                border-radius: 10px;
-                padding: 10px 20px;
-                text-align: left;
-                text-transform: uppercase;
-                -webkit-box-shadow: 5px 5px 5px #777777;
-                box-shadow: 5px 5px 5px #777777;
-            }
-            /*subcribe*/
-            div.subscribe{
-  align-items: center;
-  display: flex;
-  font-family: "Roboto";
-  font-size: 10px;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-svg {
-  position: absolute;
-  top: -4000px;
-  left: -4000px;
-}
-
-#gooey-button {
-  padding: 1rem;
-  font-size: 2rem;
-  border: none;
-  color: #0c1016;
-  filter: url("#gooey");
-  position: relative;
-  background-color: springgreen;
-}
-#gooey-button:focus {
-  outline: none;
-}
-#gooey-button .bubbles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-#gooey-button .bubbles .bubble {
-  background-color: springgreen;
-  border-radius: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  z-index: -1;
-}
-#gooey-button .bubbles .bubble:nth-child(1) {
-  left: 76px;
-  width: 25px;
-  height: 25px;
-  -webkit-animation: move-1 3.02s infinite;
-          animation: move-1 3.02s infinite;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-#gooey-button .bubbles .bubble:nth-child(2) {
-  left: 83px;
-  width: 25px;
-  height: 25px;
-  -webkit-animation: move-2 3.04s infinite;
-          animation: move-2 3.04s infinite;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-#gooey-button .bubbles .bubble:nth-child(3) {
-  left: 41px;
-  width: 25px;
-  height: 25px;
-  -webkit-animation: move-3 3.06s infinite;
-          animation: move-3 3.06s infinite;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-#gooey-button .bubbles .bubble:nth-child(4) {
-  left: 87px;
-  width: 25px;
-  height: 25px;
-  -webkit-animation: move-4 3.08s infinite;
-          animation: move-4 3.08s infinite;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-}
-#gooey-button .bubbles .bubble:nth-child(5) {
-  left: 36px;
-  width: 25px;
-  height: 25px;
-  -webkit-animation: move-5 3.1s infinite;
-          animation: move-5 3.1s infinite;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-#gooey-button .bubbles .bubble:nth-child(6) {
-  left: 70px;
-  width: 25px;
-  height: 25px;
-  -webkit-animation: move-6 3.12s infinite;
-          animation: move-6 3.12s infinite;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-}
-#gooey-button .bubbles .bubble:nth-child(7) {
-  left: 91px;
-  width: 25px;
-  height: 25px;
-  -webkit-animation: move-7 3.14s infinite;
-          animation: move-7 3.14s infinite;
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
-}
-#gooey-button .bubbles .bubble:nth-child(8) {
-  left: 60px;
-  width: 25px;
-  height: 25px;
-  -webkit-animation: move-8 3.16s infinite;
-          animation: move-8 3.16s infinite;
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
-}
-#gooey-button .bubbles .bubble:nth-child(9) {
-  left: 75px;
-  width: 25px;
-  height: 25px;
-  -webkit-animation: move-9 3.18s infinite;
-          animation: move-9 3.18s infinite;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
-}
-#gooey-button .bubbles .bubble:nth-child(10) {
-  left: 89px;
-  width: 25px;
-  height: 25px;
-  -webkit-animation: move-10 3.2s infinite;
-          animation: move-10 3.2s infinite;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-@-webkit-keyframes move-1 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -106px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-
-@keyframes move-1 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -106px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes move-2 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -87px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@keyframes move-2 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -87px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes move-3 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -125px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@keyframes move-3 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -125px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes move-4 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -125px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@keyframes move-4 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -125px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes move-5 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -61px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@keyframes move-5 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -61px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes move-6 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -119px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@keyframes move-6 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -119px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes move-7 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -83px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@keyframes move-7 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -83px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes move-8 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -100px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@keyframes move-8 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -100px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes move-9 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -95px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@keyframes move-9 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -95px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes move-10 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -113px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-@keyframes move-10 {
-  0% {
-    transform: translate(0, 0);
-  }
-  99% {
-    transform: translate(0, -113px);
-  }
-  100% {
-    transform: translate(0, 0);
-    opacity: 0;
-  }
-}
-/*hidden sharing button*/
-div.share {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20px;
-  margin: 10%;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.share-icons {
-  position: relative;
-  display: flex;
-  box-shadow: inset 0 -6px 10px -8px rgba(0, 0, 0, 0.3), inset 0 6px 10px -8px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-.share-icons__block {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: translateZ(0);
-  transition: transform 0.3s, filter 0.2s;
-  transition-timing-function: ease-in-out;
-}
-.share-icons__block-left, .share-icons__block-right {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background: white;
-  transition: 0.6s;
-}
-.share-icons__block-left {
-  -webkit-clip-path: inset(0 50% 0 0);
-          clip-path: inset(0 50% 0 0);
-}
-.share-icons__block-right {
-  -webkit-clip-path: inset(0 0 0 50%);
-          clip-path: inset(0 0 0 50%);
-}
-.share-icons__item {
-  padding: 0.75rem;
-}
-.share-icons:hover .share-icons__block {
-  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
-}
-.share-icons:hover .share-icons__block-left {
-  transform: translateX(-50%) scale(1.2);
-}
-.share-icons:hover .share-icons__block-right {
-  transform: translateX(50%) scale(1.2);
-}
-/*tile button*/
-.button-block {
-  width: 600px;
-  margin: 2px auto;
-}
-
-.social {
-  display: inline-block;
-  margin: 30px;
-  cursor: pointer;
-}
-.social a {
-  display: block;
-  background: black;
-  padding: 20px;
-  position: relative;
-  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
-  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
-  transition: all 0.5s ease-in-out;
-}
-.social a::before {
-  display: block;
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 100%;
-  left: -20px;
-  top: 10px;
-  background: rgba(0, 0, 0, 0.7);
-  transform: rotate(0deg) skewY(-45deg);
-}
-.social a::after {
-  display: block;
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  left: -10px;
-  height: 20px;
-  width: 100%;
-  transform: rotate(0deg) skewX(-45deg);
-  background: rgba(0, 0, 0, 0.7);
-  transform: rotate(45deg) scewY(-45deg);
-}
-.social a:hover {
-  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
-  box-shadow: -50px 50px 30px rgba(0, 0, 0, 0.5);
-}
-.social a i {
-  color: white;
-  font-size: 30pt;
-}
         </style>
     </head>
     <body>
-        <form>
-            <fieldset>
-                <legend>Newsletter</legend>
-                <label for="name">Name:</label>
-                <input type="text" id="name">
-                <br>
-                <label for="email">Email:</label>
-                <input type="text" id="email">
-                <br>
-                
-                <div class="subscribe">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-                    <defs>
-                        <filter id="gooey">
-                            <!-- in="sourceGraphic" -->
-                            <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
-                            <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
-                            <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
-                        </filter>
-                    </defs>
-                </svg>
-            
-                <button id="gooey-button">
-                    Subcribe
-                    <span class="bubbles">
-                        <span class="bubble"></span>
-                        <span class="bubble"></span>
-                        <span class="bubble"></span>
-                        <span class="bubble"></span>
-                        <span class="bubble"></span>
-                        <span class="bubble"></span>
-                        <span class="bubble"></span>
-                        <span class="bubble"></span>
-                        <span class="bubble"></span>
-                        <span class="bubble"></span>
-                    </span>
-                </button>
-                </div>
-                <br>
-                <div class="share">
-                    <ul class="share-icons">
-                      <li class="share-icons__item"><i class="fab fa-twitter text-black"></i></li>
-                      <li class="share-icons__item"><i class="fab fa-codepen text-black"></i></li>
-                      <li class="share-icons__item"><i class="fab fa-github text-black"></i></li>
-                      <li class="share-icons__item"><i class="fab fa-linkedin text-black"></i></li>
-                      <li class="share-icons__block">
-                        <div class="share-icons__block-left"><i class="fas fa-share text-primary"></i></div>
-                        <div class="share-icons__block-right"><i class="fas fa-share text-primary"></i></div>
-                      </li>
-                    </ul>
-                </div>
-                <br>
-                <div class="tilebutton">
-                <div class="button-block">
-                    <div class="social"><a href="#"> <i class="fab fa-facebook"></i></a></div>
-                    <div class="social"><a href="#"> <i class="fab fa-twitter"></i></a></div>
-                    <div class="social"><a href="#"> <i class="fab fa-instagram"></i></a></div>
-                    <div class="social"><a href="#"> <i class="fab fa-youtube"></i></a></div>
-                </div>
-                </div>
-            </fieldset>
-        </form>
+        <h1>Elderflower</h1>
+        <div id="content">
+            <div id="greeting" class="message">Howdy Molly, please check your order:</div>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Custom sign:</th>
+                    <td>Montague House</td>
+                </tr>
+                <tr>
+                    <th>Total tiles:</th>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <th>Subtotal:</th>
+                    <td>$70</td>
+                </tr>
+                <tr>
+                    <th>Shipping:</th>
+                    <td>$7</td>
+                </tr>
+                <tr>
+                    <th>Grand total:</th>
+                    <td>$77</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#" class="action">Pay Now</a>
+        </div>
     </body>
 </html>
