@@ -16,7 +16,7 @@ var msg = '<h2>browser window</h2><p>width: ' + window.innerWidth + '</p>';
     msg += '<p>height: ' + window.screen.width + '</p>';
 
 //browser object model methods
- window.alert();
+ window.alert('current page: ' + window.location);
  window.open('https://ethereum.org/en/get-eth/');
  
  setTimeout(function(){window.print()},5000);
