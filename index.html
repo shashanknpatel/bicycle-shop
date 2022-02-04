@@ -1,37 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Shashank Patel</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="website1.css">
-</head>
-<body>
-    <div id="page">
-    <div id="navbar">
-        <ul>
-            <li id="home"><a href="/">Home</a></li>
-            <li><a href="../works/">works</a></li>
-            <li><a href="../about/">About</a></li>
-            <li><a href="../contact/">Contact</a></li>
-        </ul>
-    </div>
-    <div id="chicken">
-    <img src="chicken.jpg" alt="chicken">
-    </div>
-    <div id="bread">
-        <img id="2" src="bread.jpg" alt="bread">
-    </div>
-    <div id="chicken">
-    <img src="eggs.jpg" alt="eggs">
-    </div>
-    
-    <div id="content">
-        <p>hello, my name is shashank</p>
-        <p>i love food.</p>
-    </div>
-    </div>
-</body>
+<html>
+    <head>
+        <title>Example</title>
+        <style>
+            * {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            body {
+                background-color: gold;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                text-align: center;
+            }
+            #content {
+                background-color: white;
+                border: 10px dashed gold;
+                display: inline-block;
+                padding: 30px 50px;
+                margin: 20px auto 50px auto;
+                max-width: 580px;
+                min-height: 4em;
+                overflow: auto;
+                text-align: center;
+            }
+            h1 {
+                text-indent: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            h1 {
+                width: 278px;
+                height: 112px;
+                margin: 0px auto 0px auto;
+                padding-top: 40px;
+                background: url("elderflower-logo.png") no-repeat bottom center;
+            }
+            .action {
+                background-color: gold;
+                color: black;
+                width: auto;
+                height: 1 em;
+                padding: 0.5em 0.75em;
+                float: right;
+            }
+            
+            .action {
+                position: relative;
+                top: 1.3em;
+                right: -2.3em;}
+            a {
+                text-decoration:none;
+            }
+            table {
+                padding: 10;
+                margin: 20px 100px 0px 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Elderflower</h1>
+        <div id="content">
+            <div id="greeting" class="message">Howdy Molly, please check your order:</div>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Custom sign:</th>
+                    <td>Montague House</td>
+                </tr>
+                <tr>
+                    <th>Total tiles:</th>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <th>Subtotal:</th>
+                    <td>$70</td>
+                </tr>
+                <tr>
+                    <th>Shipping:</th>
+                    <td>$7</td>
+                </tr>
+                <tr>
+                    <th>Grand total:</th>
+                    <td>$77</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#" class="action">Pay Now</a>
+        </div>
+        <script src="example.js"></script>
+    </body>
 </html>
