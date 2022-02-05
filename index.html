@@ -1,12 +1,298 @@
+
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Maps</title>
-        <link rel="stylesheet" href="https://www.javascriptbook.com/code/c08/css/c08.css">
-    </head>
-    <body>
-        <header><h1></h1></header>
-        <h2>The bus stops here.</h2>
-        <section id="content"></section>
-    </body>
-    <script src="https://www.javascriptbook.com/code/c08/js/data-html.js"></script>
+  <head>
+    <title>JavaScript &amp; jQuery - Chapter 8: Ajax &amp; JSON - Example</title>
+    <style>
+        /* The Maker Bus Stylesheet */
+
+@import url(http://fonts.googleapis.com/css?family=Oswald:700,400);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  background-color: #fff;
+  color: #666;
+  font-family: 'Open Sans', arial, sans-serif;
+  width: 960px;
+  margin: 0 auto 0 auto;}
+
+header {
+  display: block;
+  height: 140px;
+  border-bottom: 5px solid #000;
+  margin-bottom: 30px;}
+
+h1 {
+  font-weight: normal;
+  margin: 28px 0 0 0;
+  float: left;
+  width: 225px;
+  height: 90px;
+  background-image: url('maker-logo.png');
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;}
+
+h2 {
+  font-size: 2.4em;
+  margin: 0.7em 0 1.7em 0;
+  padding: 0;
+  color: #000;
+  line-height: 1em;
+  letter-spacing: -.06em;}
+
+h3 {
+  margin: 0;
+  font-size: 1.4em;
+  color: #3fbb8a; 
+  font-family: oswald, arial, sans-serif;}
+
+nav {
+  font-family: oswald, arial, sans-serif;
+  float: right; 
+  width: 600px;
+  padding-top: 30px;
+  font-size: 1.4em;
+  text-align: right;
+  text-transform: uppercase;}
+nav a {
+  padding-left: 30px;}
+nav a:hover, a.current {
+  color: #d71a00;}
+
+a {text-decoration: none; color: #000;}
+
+.third, .event {
+  width: 320px;
+  float: left;
+  text-align: center;}
+
+.event p {border-right: 1px solid #999; }
+#content .event:last-child p {border-right: none;}
+
+.third p {
+  padding: 0 20px 0 20px;
+  margin: 40px 0 20px 0;
+  text-align: left;
+  line-height: 1.4em;}
+
+.intro p {
+  margin: 0 0 0 0;
+  padding: 0 20px 20px 0;}
+
+
+.half {
+  padding-top: 60px;
+  width: 480px;
+  float: left;
+  text-align: center;}
+
+#vote {padding-top: 20px;}
+p#selector {margin-top: -40px;}
+
+form {
+  margin: 0 0 0 90px;
+  width: 300px;}
+label, input {
+  display: inline-block;}
+label {
+  display: block;
+  text-align: left;
+  padding-top: 10px;
+  text-transform: uppercase;}
+input {
+  border: none;
+  border-radius: 5px;
+  background-color: #dcdcdc;
+  font-size: 1em;
+  line-height: 1em;
+  width: 280px;
+  padding: 6px 10px 6px 10px;}
+input[type=submit] {
+  background-color: #1fb684;
+  color: #fff;
+  font-weight: bold;
+  clear:left;
+  float: right;
+  width: 8em;
+  padding: 8px 20px 8px 20px;
+  margin-top: 10px;
+  text-transform: uppercase;}
+input[type=submit]:hover {
+  background-color: #000;
+  cursor: pointer;}
+
+
+/* Exchange rates */
+#rates div {
+  background-repeat:   no-repeat;
+  background-position: left center;
+  padding-left: 20px;}
+#rates {padding: 50px 100px 50px 100px;}
+#reload {padding: 0 100px 0 100px;}
+#rates, #reload {text-align: left;}
+.AU {background-image: url('au.png');}
+.UK {background-image: url('gb.png');}
+.US {background-image: url('us.png');}
+
+
+/* Example */
+#event a {
+  font-family: oswald, arial, sans-serif;
+  font-size: 120%;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 4.5em;
+  display: block; 
+  height: 120px; width: 100%;}
+#event img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 10px;}
+#event a:hover, #sessions a:hover {color: #1fb684;}
+#sessions a {
+  font-family: oswald, arial, sans-serif;
+  font-size: 120%;}
+#sessions p {
+  margin-top: 2em;}
+#sessions ul {
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+  padding: 0 20px 0 20px;
+  margin: 0 0 40px 0;}
+#sessions li {
+  list-style-type: none; 
+  padding: 20px 0 20px 0; 
+  background-color: #fff; 
+  border-top: 1px solid #d6d6d6;
+  text-align: left;}
+#sessions li:first-child {
+  border-top: none;
+  padding-top: 1.8em;}
+#sessions li .time {
+  display: inline-block;
+  width: 60px;}
+#details div {
+  text-align: left;
+  padding: 1.8em 0 0em 1;}
+#details p {
+  padding: 0;
+  margin: 0.8em 0 0 0;}
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>THE MAKER BUS</h1>
+      <nav>
+        <a href="https://www.javascriptbook.com/code/c08/jq-load.html">HOME</a>
+        <a href="https://www.javascriptbook.com/code/c08/jq-load2.html">ROUTE</a>
+        <a href="https://www.javascriptbook.com/code/c08/jq-load3.html">TOYS</a>
+        <a href="index.html" class="current">TIMETABLE</a>
+      </nav>
+    </header>
+
+    <section id="content">
+      <div id="container">
+        <h2>Roll up! Roll up! It's the maker bus...</h2>
+
+        <div class="third">
+          <div id="event">
+            <a id="ca" href="ca.html"><img src="map-ca.png" alt="San Francisco" />San Francisco, CA</a>
+            <a id="tx" href="tx.html"><img src="map-tx.png" alt="Austin, TX" />Austin, TX</a>
+            <a id="ny" href="ny.html"><img src="map-ny.png" alt="New York, NY" />New York, NY</a>
+          </div>
+        </div>
+        <div class="third">
+          <div id="sessions">
+            <p>Select an event from the left</p>
+          </div>
+        </div>
+        <div class="third">
+          <div id="details"></div>
+        </div>
+
+      </div><!-- #container -->
+    </section><!-- #content -->
+
+
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $(function() {                                    // When the DOM is ready
+
+var times;                                      // Declare global variable
+$.ajax({
+  beforeSend: function(xhr) {                   // Before requesting data
+    if (xhr.overrideMimeType) {                 // If supported
+      xhr.overrideMimeType("application/json"); // set MIME to prevent errors
+    }
+  }
+});
+
+// FUNCTION THAT COLLECTS DATA FROM THE JSON FILE
+function loadTimetable() {                    // Declare function
+  $.getJSON('data/example.json')              // Try to collect JSON data
+  .done( function(data){                      // If successful
+    times = data;                             // Store it in a variable
+  }).fail( function() {                       // If a problem: show message
+    $('#event').html('Sorry! We could not load the timetable at the moment');
+  });
+}
+
+loadTimetable();                              // Call the function
+
+
+// CLICK ON THE EVENT TO LOAD A TIMETABLE 
+$('#content').on('click', '#event a', function(e) {  // User clicks on event
+
+  e.preventDefault();                                // Prevent loading page
+  var loc = this.id.toUpperCase();                   // Get value of id attr
+
+  var newContent = '';                               // Build up timetable by
+  for (var i = 0; i < times[loc].length; i++) {      // looping through events
+    newContent += '<li><span class="time">' + times[loc][i].time + '</span>';
+    newContent += '<a href="descriptions.html#';
+    newContent += times[loc][i].title.replace(/ /g, '-') + '">';
+    newContent += times[loc][i].title + '</a></li>';
+  }
+
+  $('#sessions').html('<ul>' + newContent + '</ul>'); // Display times on page
+
+  $('#event a.current').removeClass('current');       // Update selected item
+  $(this).addClass('current');
+
+  $('#details').text('');                             // Clear third column
+});
+
+// CLICK ON A SESSION TO LOAD THE DESCRIPTION
+$('#content').on('click', '#sessions li a', function(e) { // Click on session
+  e.preventDefault();                                     // Prevent loading
+  var fragment = this.href;                               // Title is in href
+
+  fragment = fragment.replace('#', ' #');                 // Add space after#
+  $('#details').load(fragment);                           // To load info
+
+  $('#sessions a.current').removeClass('current');        // Update selected
+  $(this).addClass('current');
+});
+
+
+// CLICK ON PRIMARY NAVIGATION
+$('nav a').on('click', function(e) {                       // Click on nav
+  e.preventDefault();                                      // Prevent loading
+  var url = this.href;                                     // Get URL to load
+
+  $('nav a.current').removeClass('current');               // Update nav
+  $(this).addClass('current');
+
+  $('#container').remove();                                // Remove old part
+  $('#content').load(url + ' #container').hide().fadeIn('slow'); // Add new
+});
+
+});
+    </script>
+
+  </body>
 </html>
