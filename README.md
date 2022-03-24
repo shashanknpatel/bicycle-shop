@@ -1,6 +1,3 @@
-# Menu Sorting 📃
-![alt text](public/thumbnail.jpg)
-## Technologies used:
-- `React.js`
-- `Emotion.sh`
-- `Framer-Motion`
+# react-menu-list
+
+see live here https://react-menu-list.vercel.app/
