@@ -5,7 +5,7 @@ const menu = [
     category: 'breakfast',
     price: 1500,
     img:
-      'public/img/Black chicken.jpg',
+      'public/img/Black-chicken.jpg',
     desc: `Moin-Moin and Akara are both meals made from pureed beans and spicy ingredients, full of proteins, light and refreshing.`,
   },
   {
