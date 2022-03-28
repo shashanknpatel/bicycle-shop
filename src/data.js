@@ -1,7 +1,7 @@
 const menu = [
   {
     id: 1,
-    title: 'akara and akamu',
+    title: 'Plymouth Rock chicken',
     category: 'breakfast',
     price: 1500,
     img:
@@ -10,73 +10,73 @@ const menu = [
   },
   {
     id: 2,
-    title: 'Yam and Egg sauce',
+    title: 'Ayam Kampong',
     category: 'lunch',
     price: 1700,
     img:
-      'https://ocdn.eu/pulscms-transforms/1/zI6k9kpTURBXy8yMzRlMTBmNDBmMzg0YTFjZDZiYjczZDIxZTc2YzE3MC5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'https://images.pexels.com/photos/3820303/pexels-photo-3820303.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     desc: `Boiled or fried yam and egg sauce is a usual suspect on the tables of Nigerians. It is quite filling and can last you the whole day, if not careful. Egg sauce is an easy-to-prepare Nigerian sauce made by sautéing tomatoes and eggs. `,
   },
   {
     id: 3,
-    title: 'suya',
+    title: 'ISA Brown',
     category: 'dinner',
     price: 1000,
-    img: 'https://www.chefspencil.com/wp-content/uploads/Suya.jpg',
+    img: 'https://images.pexels.com/photos/2134246/pexels-photo-2134246.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     desc: `This is simply nicely cut beef that is spiced and grilled over an open flame. It is served with fresh cabbage, tomatoes, and onions.`,
   },
   {
     id: 4,
-    title: 'Tea and bread',
+    title: 'Leghorn chicken',
     category: 'breakfast',
     price: 1200,
     img:
-      'https://ocdn.eu/pulscms-transforms/1/r3Rk9kpTURBXy9hOWMwMmU0MWFmOTBkMTM0ZjEyOTAzM2NmZTM2OWE0NS5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'https://images.pexels.com/photos/9673381/pexels-photo-9673381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     desc: `No introductions needed. Children, adults, the elderly, everyone loves Nigerian tea and bread. The tea is made out of cocoa and milk, while the bread can be toasted or eaten with a spread. `,
   },
   {
     id: 5,
-    title: 'jollof rice',
+    title: 'Wyandotte chicken',
     category: 'lunch',
     price: 2500,
     img:
-      'https://img.buzzfeed.com/buzzfeed-static/static/2019-01/14/17/asset/buzzfeed-prod-web-06/sub-buzz-25688-1547505890-13.jpg?output-quality=auto&output-format=auto',
+      'https://images.pexels.com/photos/7174868/pexels-photo-7174868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     desc: `No list of Nigerian foods can be complete without a mention of Jollof rice. It's a party dish brought out at celebrations, a signature regional dish, and the recipe with which many West African communities — and countries `,
   },
   {
     id: 6,
-    title: 'ofada rice',
+    title: 'Silkie chicken',
     category: 'dinner',
     price: 2200,
     img:
-      'https://shop4younow.com.ng/317-large_default/ofada-rice-sauce-per-portion.jpg',
+      'https://cdn.pixabay.com/photo/2021/08/13/18/22/bird-6543685_1280.jpg',
     desc: `This is one of those dishes whose very image inspires appetites from the pickiest of eaters. Be careful though: the dish is pretty spicy and tastes great when paired with tongue-cooling rice.`,
   },
   {
     id: 7,
-    title: 'Indomie and egg',
+    title: 'Orpington chicken',
     category: 'breakfast',
     price: 2200,
     img:
-      'https://ocdn.eu/pulscms-transforms/1/Mg3k9kpTURBXy81Mjc2OWJjZGI3ZTE0NDljMTRhZmYyYWI1MzhmNmRlMC5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'https://cdn.pixabay.com/photo/2021/01/24/18/13/cochin-5946001__340.jpg',
     desc: `Indomie is an extremely popular instant noodle brand in Nigeria, so popular that it has become the household name for all instant noodles. `,
   },
   {
     id: 8,
-    title: 'Bread and Beans',
+    title: 'Barnevelder',
     category: 'lunch',
     price: 2500,
     img:
-      'https://ocdn.eu/pulscms-transforms/1/U_fk9kpTURBXy81NGM2MzIxNGE2NTVmYmI2YmU4Njg0MTJkM2QyODQzNy5qcGeSlQLNAxQAwsOVAgDNAvjCw4GhMAU',
+      'https://images.pexels.com/photos/6547672/pexels-photo-6547672.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
     desc: `Bread and beans or Ewa agoyin is native to the Yoruba people but it is also one of the foods every struggling Nigerian knows well.  `,
   },
   {
     id: 9,
-    title: 'eba and efo riro',
+    title: 'Sussex chicken',
     category: 'dinner',
     price: 1150,
     img:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Eba_and_Efo_riro_%28Vegetable_Soup%29_with_Fish.jpg/220px-Eba_and_Efo_riro_%28Vegetable_Soup%29_with_Fish.jpg',
+      'https://images.pexels.com/photos/3757197/pexels-photo-3757197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     desc: `Ẹ̀bà is a staple food mainly eaten in the West African subregion, particularly in Nigeria and some parts of Ghana. It came from Nigeria originally`,
   },
 ]
