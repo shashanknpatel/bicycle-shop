@@ -10,7 +10,7 @@ window.Seed = (function () {
       description: 'On-demand sand castle construction expertise.',
       url:'#',
       votes: generateVoteCount(),
-      submitterAvatarUrl: 'images/Avatars/daniel.jpg',
+      submitterAvatarUrl: 'images/avatars/daniel.jpg',
       productImageUrl: 'images/products/scarlettjohansson.jpg',
     },
     {
@@ -19,7 +19,7 @@ window.Seed = (function () {
       description: 'Earn points when your favourite politicians pass legislation.',
       url:'#',
       votes: generateVoteCount(),
-      submitterAvatarUrl: 'images/Avatars/kristy.png',
+      submitterAvatarUrl: 'images/avatars/kristy.png',
       productImageUrl: 'images/products/sc.jpg',
     },
     {
@@ -28,7 +28,7 @@ window.Seed = (function () {
       description: 'We already have your measurements and shipping address.',
       url:'#',
       votes: generateVoteCount(),
-      submitterAvatarUrl: 'images/Avatars/veronika.jpg',
+      submitterAvatarUrl: 'images/avatars/veronika.jpg',
       productImageUrl: 'images/products/sc2.jpg',
     },
     {
@@ -37,7 +37,7 @@ window.Seed = (function () {
       description: 'High-minded or absent-minded? You decide.',
       url:'#',
       votes: generateVoteCount(),
-      submitterAvatarUrl: 'images/Avatars/molly.png',
+      submitterAvatarUrl: 'images/avatars/molly.png',
       productImageUrl: 'images/products/sc3.jpg',
     },
   ];
