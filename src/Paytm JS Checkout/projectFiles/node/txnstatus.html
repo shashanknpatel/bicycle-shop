@@ -1,0 +1,22 @@
+
+<html>
+   <head>
+      <title>Paytm JS Checkout - NodeJs</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   </head>
+   <body>
+      <div class="container text-center">
+      	<div class="shadow p-3 mb-5 bg-white rounded">
+				<h4 class="text-success text-left">Transaction details are below:</h4>	
+				<table class="table table-bordered">
+               <tr><th>Result Message</th><td><%= msg %></td></tr>
+            <% Object.keys(data).forEach(function(key) { %>
+               <tr><td><%= key %></td><td><%= data[key] %></td></tr>
+            <% }); %>
+				</table>
+		</div>
+	</div>
+	</div>
+	</body>
+</html>
