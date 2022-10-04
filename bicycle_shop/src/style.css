@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  background-image: linear-gradient(196deg, #f1a9a9, #e66767);
+  font-family: 'Noto Sans', sans-serif;
+  overflow: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-wrapper button {
+  padding: 20px;
+  border: none;
+  background-color: #944852;
+  position: relative;
+  outline: none;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  border-radius: 50px;
+  text-transform: uppercase; 
+  cursor: pointer;
+}
+
+.page-wrapper button .cart-item:before {
+  content: "1";
+  display: block;
+  line-height: 24px;
+  height: 24px;
+  width: 24px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  background: #242424;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.page-wrapper button .cart-item {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  top: -5px;
+  right: -5px;
+}
+
+.cart {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #944852;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border-radius: 50px;
+}
+
+.cart i {
+  font-size: 24px;
+  color: #fff;
+}
+
+.cart:before {
+  content: attr(data-totalitems);
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #242424;
+  line-height: 24px;
+  padding: 0 5px;
+  height: 24px;
+  min-width: 24px;
+  color: white;
+  text-align: center;
+  border-radius: 24px;
+}
+
+.page-wrapper button.sendtocart .cart-item {
+  display: block;
+  animation: xAxis 1s forwards cubic-bezier(1, 0.44, 0.84, 0.165);
+}
+.page-wrapper button.sendtocart .cart-item:before {
+  animation: yAxis 1s alternate forwards cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes xAxis {
+  100%{
+    transform: translateX(calc(50vw - 105px));
+  }
+}
+
+@keyframes yAxis {
+  100% {
+    transform: translateY(calc(-50vh + 75px));
+  }
+}
+
+.cart.shake{
+  animation: shakeCart 0.4s ease-in-out forwards;
+}
+
+@keyframes shakeCart {
+  25%{
+    transform: translateX(6px);
+  }
+  50%{
+    transform: translateX(-4px);
+  }
+  75%{
+    transform: translateX(2px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
