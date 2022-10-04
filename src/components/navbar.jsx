@@ -21,7 +21,7 @@ export default function Navbar() {
             <Outlet/>
         </div>
         <div>
-                <img src={bluebicycle} />
+                <img className="pt-16" src={bluebicycle} />
         </div>
         </div>
     );
