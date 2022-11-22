@@ -1,22 +1,30 @@
 import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link
+  createBrowserRouter,
 } from "react-router-dom";
-import AddProduct from "./components/addproduct";
-import HomePage from "./components/homepage";
+import Home from "./pages/home";
+import ErrorPage from "./pages/errorpage";
+import {data} from "./data";
 import ProductDetails from "./components/productdetails";
+import Cart from "./components/cart";
 
 
-export default function App() {
-  return(
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/addproduct" element={<ProductDetails/>} />
-        <Route path="/addproduct/checkout" element={<AddProduct/>}/>
-      </Routes>
-    </BrowserRouter>
-  );
-}
+const App = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home data={data} />,
+    errorElement: <ErrorPage/>,
+    children: [
+      
+    ]
+  },
+  {
+    path: "products/:productname",
+    element: <ProductDetails data={data} />,
+  },
+  {
+    path: "cart",
+    element: <Cart data={data} />,
+  },
+])
+
+export default App;
