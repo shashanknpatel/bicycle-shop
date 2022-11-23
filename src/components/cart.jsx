@@ -58,7 +58,7 @@ export default function Cart() {
                                 <h1 className="lg:pl-80">total price:</h1>
                                 <h1 className="pl-4 lg:pl-16">&#x20B9; {cartTotal}</h1>
                     </div>
-                    <div className="text-center px-14 space-y-4 lg:pl-96 py-10">
+                    <div className="text-center px-16 space-y-4 lg:pl-96 py-10">
                         <a
                           href="https://rzp.io/l/jamFdwyi"
                           className="uppercase block w-60 p-2 font-semibold text-lg mb-10 bg-cyan-500 ring-2 ring-black"
