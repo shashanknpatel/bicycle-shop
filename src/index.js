@@ -1,22 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import {
-  RouterProvider,
-} from "react-router-dom";
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { CartProvider } from 'react-use-cart';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Home from './pages/home'
+import './index.css'
+import ProductDetails from './pages/productdetails'
+import Cart from './components/cart'
+import { CartProvider } from 'react-use-cart'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-  <CartProvider>
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element: <Home/>,
+  },
+  {
+    path: "products/:productname",
+    element: <ProductDetails/>,
+  },
+  {
+    path: "/cart",
+    element: <Cart/>,
+  },
+  {
+    path: "products/:productname/cart",
+    element: <Cart/>,
+  },
+])
 
-    <RouterProvider router={App} />
-  </CartProvider>
-  </React.StrictMode>
-);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
+  
+)
 
-
-reportWebVitals();

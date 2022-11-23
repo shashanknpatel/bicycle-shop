@@ -1,13 +1,13 @@
 import Navbar from "../components/navbar";
+import ProductList from "../components/productlist";
 import Wallpaper from "../components/wallpaper";
-import ProductList from "./productlist";
 
-export default function Home({data}) {
+export default function Home() {
     return(
-        <>
+        <>  
             <Navbar/>
             <Wallpaper/>
-            <ProductList data={data} />
+            <ProductList/>   
         </>
-    );
+    )
 }
