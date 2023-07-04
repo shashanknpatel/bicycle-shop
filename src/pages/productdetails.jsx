@@ -1,5 +1,7 @@
 import {Link} from "react-router-dom";
 import BicycleShop from "../images/NavbarLogo.jpg";
+import ProductQuantity from "../components/productquantity";
+import Navbar from "../components/navbar";
 import { useParams } from "react-router-dom";
 import data from "../data";
 import { useCart } from "react-use-cart";

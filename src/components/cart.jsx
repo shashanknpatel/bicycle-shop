@@ -3,64 +3,7 @@ import { useCart } from "react-use-cart";
 import EmptyCart from "./emptycart";
 import { Link } from "react-router-dom";
 
-import { useEffect } from "react";
-
 export default function Cart() {
-
-  const updateAmount = async (cartTotal) => {
-    
-    const response = await fetch('http://localhost:3001/razorpay', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ "amount": cartTotal })
-    });
-    const data = await response.json();
-    console.log(data);
-
-    const options = {
-      key: process.env.RAZORPAY_KEY_ID,
-      currency: data.currency,
-      amount: data.amount,
-      
-      order_id: data.id,
-      
-      
-      prefill: {
-        name: "",
-        email: "",
-        contact: "",
-      },
-
-      success: "http://localhost:3000/payment/success",
-      
-    };
-
-    const paymentObject = new window.Razorpay(options);
-    paymentObject.open();
-  }
-
-    const loadScript = (src) => {
-        return new Promise((resolve) => {
-          const script = document.createElement("script");
-          script.src = src;
-          script.onload = () => {
-            resolve(true);
-          };
-          script.onerror = () => {
-            resolve(false);
-          };
-          document.body.appendChild(script);
-        });
-      };
-      
-      useEffect(() => {
-        loadScript("https://checkout.razorpay.com/v1/checkout.js");
-      });
-
-      
-
     const {
         isEmpty,
         totalUniqueItems,
@@ -115,13 +58,13 @@ export default function Cart() {
                                 <h1 className="lg:pl-80">total price:</h1>
                                 <h1 className="pl-4 lg:pl-16">&#x20B9; {cartTotal}</h1>
                     </div>
-                    <div className="text-center px-14 space-y-4 lg:pl-96 py-10">
-                        <button
-                          onClick={() => updateAmount(cartTotal)}
+                    <div className="text-center px-16 space-y-4 lg:pl-96 py-10">
+                        <a
+                          href="https://rzp.io/l/jamFdwyi"
                           className="uppercase block w-60 p-2 font-semibold text-lg mb-10 bg-cyan-500 ring-2 ring-black"
                         >
                           Checkout
-                        </button>
+                        </a>
                       </div>
                 </div>
             </div>

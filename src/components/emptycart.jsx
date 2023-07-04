@@ -6,10 +6,10 @@ export default function EmptyCart() {
         <>
               <div className="font-mono">
                 <nav className="fixed top-0 left-0 right-0 flex items-center h-max mx-auto text-slate-800 bg-white text-lg shadow-md">
-                    <a href="http://localhost:3000/"><img className="h-16" src={BicycleShop} /></a>
+                    <Link to={`/`}><img className="h-16" src={BicycleShop} /></Link>
                         <ul className="flex">
 
-                            <li className="p-4 font-semibold hover:underline decoration-dashed" ><a href="http://localhost:3000/">Home</a></li>
+                            <li className="p-4 font-semibold hover:underline decoration-dashed" ><Link to={`/`}>Home</Link></li>
 
                             <li className="p-4 underline decoration-dashed" >
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="#06b6d4" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
